@@ -1,0 +1,21 @@
+---
+- hosts: all
+  vars:
+    web_base: /var/www/blog
+    project: blog
+    env: development
+  roles:
+    - php
+    - composer
+    - {
+        role: nginx,
+        domain: 'blog.local',
+        platform: 'blog',
+      }
+    - {
+        role: mysql,
+        db_name: test,
+        user_name: dev,
+        user_password: dev
+
+      }

@@ -1,0 +1,13 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Teslenko Artem
+  description: PHP Composer Ubuntu setup
+  license: Apache 2.0
+  min_ansible_version: 1.7
+  platforms:
+  - name: RedHat
+    versions:
+    - 6
+    - 7

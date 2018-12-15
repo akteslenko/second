@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  php:
+    build: ./docker/php
+    container_name: php
+    volumes:
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+      - ./:/var/www
+
+  nginx:
+    build: ./docker/nginx
+    container_name: nginx-server
+    volumes:
+      - ./:/var/www
+    ports:
+      - '8080:80'
+
+  db:
+    image: mariadb:10.2
+    container_name: mariadb
+    environment:
+        - MYSQL_DATABASE=laravel
+        - MYSQL_ROOT_PASSWORD=root
+    volumes:
+        - /Users/artemteslenko/docker/db/:/var/lib/mysql
+    ports:
+      - '3306:3306'

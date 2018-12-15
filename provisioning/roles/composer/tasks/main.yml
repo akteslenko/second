@@ -1,0 +1,6 @@
+---
+- name: Install Composer via Curl
+  become: true
+  shell: "curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer"
+  args:
+    creates: /usr/local/bin/composer

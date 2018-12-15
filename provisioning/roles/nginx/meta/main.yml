@@ -1,0 +1,12 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Artem Teslenko
+  description: Nginx for Ubuntu
+  license: Apache 2.0
+  min_ansible_version: 2.5
+  platforms:
+  - name: Redhat
+    versions:
+    - 7

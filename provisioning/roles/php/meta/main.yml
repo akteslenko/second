@@ -1,0 +1,12 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Teslenko Artem
+  description: PHP-FPM Configuration
+  license: Apache 2.0
+  min_ansible_version: 1.7
+  platforms:
+  - name: Redhat
+    versions:
+    - 7
